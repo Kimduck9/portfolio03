@@ -1,0 +1,183 @@
+/* font */
+@font-face {
+    font-family: 'BinggraeMelona-Bold'; /* 빙그레 메로나 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+::-webkit-scrollbar {display:none;} 
+/* 아이폰 가로 모드에서 글씨 확대 금지 */
+:root{-webkit-text-size-adjust : 100%;}    
+
+/* reset */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body, html{font-family: 'BinggraeMelona'; cursor: default; overflow-x: hidden;}
+ul, li, ol, dl{list-style: none;}
+a{text-decoration: none; font-family: 'BinggraeMelona'; color: #212121;}
+img{display: block; object-fit: cover;}
+address, em{font-style: normal;}
+button {border: 0; outline: none;}
+
+.clearfix::before, .clearfix::after{content: ""; display: block; clear: both;}
+
+
+/* wrap */
+#wrap{width: 100%;}
+
+/* fix_bottom */
+.fix_bottom{position: fixed; width: 100vw; left: 0; bottom: 0; z-index: 999999; box-sizing: border-box; font-family: 'BinggraeMelona-Bold'; cursor: pointer;}
+.fix_flex{width: 100%; display: flex; justify-content: center; align-items: flex-end;}
+.fix_flex > article{
+    width: 50%; height: 6vh; background-color:#fbb03e;
+    border-radius: 20px 20px 0 0;
+    border: 1px solid #f57c00; border-bottom: 0;
+}
+.fix_flex > article:hover p{color: #ff3d00; text-shadow: 0px 1px 5px #fff;}
+.fix_flex > article:hover p::before{animation: pulse 1s;}
+
+.fix_flex > article p{font-size: 30px; color: #fff; text-shadow: 0px 2px 5px #000; text-align: center; margin-top: 4px; position: relative; transition: all 0.3s;}
+.fix_flex > article p::before{content: ""; position: absolute; bottom: 0; width: 150px; height: 150px;}
+
+.fix_flex .left p::before{background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub4-subM.png?raw=true); background-size: cover; right: 25px;}
+.fix_flex .right p::before{background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub4-subW.png?raw=true); background-size: cover; left: 25px;}
+.sub_footer{margin-bottom: 15vh;}
+
+
+/* header */
+.header{background-color: #fff176;}
+
+/* all bg */
+.sec01{width: 100%; height: auto; background-color: #ffff8d;}
+.sec02{width: 100%; height: auto; background-color: #f0f0f0;}
+.sec03{width: 100%; height: auto; }
+.sec04{width: 100%; height: 80vh; background-color: #ffff8d; position: relative;}
+.sec05{width: 100%; height: auto; background-color: #f0f0f0;}
+
+.section .tit{padding-top:10vh;}
+.section .tit h2{font-size: 28px; text-align: center;}
+.section .tit h2 > span{display: block;}
+.section .tit > p{text-align: center; margin-top: 3vh; font-size: 17px; color: #333;}
+
+/* sec01 */
+.sec01 .art_box{display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 70px 0 130px 0; max-width: 960px; margin: 0 auto;}
+.sec01 .art_box > article{padding: 32px; background-color: #fff; border-radius: 20px; box-shadow:0px 7px 7px 0 rgba(0,0,0,0.5); transition: all 0.3s;}
+.sec01 .art_box > article .tittle_box{overflow: hidden;}
+.sec01 .art_box > article .tittle_box > b{float: left; font-size: 24px; padding-top: 2%;}
+.sec01 .art_box > article .tittle_box > img{float: right; width: 50px;}
+.sec01 .art_box > article .desc{color: #333; margin-top: 2vh;}
+.sec01 .art_box > article .desc span{display: block; font-size: 15px;}
+.sec01 .art_box > article .desc span > em{font-weight: bold;}
+.sec01 .art_box > article:hover{transform: scale(1.02);}
+
+/* sec02 */
+.sec02 > ul{display: flex; align-items: center; justify-content: space-evenly; margin-top: 10vh; padding-bottom: 10vh;}
+.sec02 > ul li img{width: 400px;}
+
+/* sec03 */
+.sec03 > ul{ margin: 6vh 0; padding-bottom: 12vh; width: 2800px; height: 660px;}
+.sec03 > ul li{width: 100%; height: 200px; margin-bottom: 20px; background-position: 0 center; background-size: cover; background-repeat: repeat-x; box-shadow: 0px 2px 7px 0 rgba(0,0,0,0.5); animation: li1 100s infinite linear; opacity: .9;}
+.sec03 > ul li.s1{background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub4-booklist-1.png?raw=true);}
+.sec03 > ul li.s2{background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub4-booklist-2.png?raw=true); animation: li2 100s infinite linear}
+.sec03 > ul li.s3{background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub4-booklist-3.png?raw=true); margin-bottom: 0;}
+
+@keyframes li1{
+    0%{background-position: 0 center;}
+    100%{background-position: -3130px center;}
+}
+@keyframes li2{
+    0%{background-position: 0 center;}
+    100%{background-position: 3130px center;}
+}
+
+/* sec04 */
+.sec04{height: 90vh;}
+.sec04 .x-noti{width: 100%; text-align: center; margin-top: 12vh;}
+.sec04 .x-noti li{font-weight: 600; font-size: 16px; text-shadow: 0 1px 4px rgba(255,255,255,0.6); transition: all 0.3s;}
+.sec04 .x-noti li:hover{text-shadow: 0 0px 2px #f57c00}
+.sec04 .x-noti li:first-child{margin-bottom: 10vh;}
+.sec04 .x-noti li span{position: relative; display: inline-block; display: block;}
+.sec04 .x-noti ul .im1::before{
+    content: "";
+    width: 70px; height: 70px;
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub4-x1.png?raw=true) no-repeat;
+    background-size: cover;
+    position: absolute; left: 50%; top: -80px; transform: translateX(-50%);
+}
+.sec04 .x-noti ul .im2::before{
+    content: "";
+    width: 70px; height: 70px;
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub4-x2.png?raw=true) no-repeat;
+    background-size: cover;
+    position: absolute; left: 50%; top: -80px; transform: translateX(-50%);
+}
+
+.sec04 .subs{margin: 6vh auto auto; width: 350px; height: auto; background-color: #fff; padding: 32px; border-radius: 20px;}
+.sec04 .subs > p{font-size: 20px; font-weight: bold;}
+.sec04 .subs .sale{margin-top: 5%;}
+.sec04 .subs .sale ul li{font-size: 16px; color: #777; position: relative;}
+.sec04 .subs .sale ul li > span{font-size: 32px; color: #000; font-weight: 600;}
+.sec04 .subs .sale ul li > em{color: #000; font-weight: 600;}
+.sec04 .subs .sale ul li.s2{margin: 4% 0 -6% 9%;}
+.sec04 .subs .sale ul li.s2::after{
+    content: "";
+    width: 70px; height: 35px;
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub4-16.png?raw=true) no-repeat;
+    background-size: cover;
+    position: absolute; right: 40%; top: -50%;
+}
+.sec04 .subs .sale ul li:last-child{margin-top: 3%;}
+.sec04 .subs .sale .txt{font-size: 13px; color: #777; margin-top: 10%;}
+.sec04 .subs .sale .txt span{display: block;}
+
+/* .sec05 */
+.sec05 .FAQ{margin-top: 60px; padding-bottom: 50px;}
+.sec05 .FAQ > ul{width: 960px; margin: 0 auto;}
+.sec05 .FAQ > ul > li{
+    position: relative;
+    margin-bottom: 16px; padding: 16px 24px;
+    background-color: #fff; border-radius: 20px;
+    box-shadow:0px 3px 7px 0 rgba(0,0,0,0.5);
+    overflow: hidden;
+    cursor: pointer;
+}
+.sec05 .FAQ > ul > li > b{font-size: 20px; line-height: 24px;}
+.sec05 .FAQ > ul > li > span{position: absolute; right: 25px; top: 10px;}
+.sec05 .FAQ > ul > li > span img{width: 40px;}
+.sec05 .FAQ > ul > li > span.on img{transform: rotate(180deg);}
+.sec05 .FAQ > ul > li > ul.answer{border-top: 1px solid #000; margin-top: 20px; padding-top: 16px; display: none;}
+.sec05 .FAQ > ul > li > ul.answer.active{display: block}
+.sec05 .FAQ > ul > li > ul > li{padding-left: 2px; font-size: 16px; line-height: 1.4; color: #333;}
+.sec05 .FAQ > ul > li > ul > li span{display: block;}
+.sec05 .FAQ > ul > li > ul > li span > em{font-weight: bold;}
+
+
+
+
+/* top_btn */
+#top_btn{position: fixed; right: 24px; bottom: 7vh; z-index: 99999; cursor: pointer;}
+#top_btn span{position: relative; display: block; width: 100%; line-height: 45px; color: transparent;}
+#top_btn span::before{
+    content: "";
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/top_btn.png?raw=true) no-repeat;
+    background-size: cover;
+    width: 34px; height: 45px;
+    position: absolute; right: 0; bottom: 0;
+}
+#top_btn:hover span{animation: wobble 1s;}
+
+@media(max-width:1024px){
+    #top_btn span{line-height: 40px;}
+    #top_btn span::before{width: 29px; height: 40px;}
+    .header .nav.back{ background-color: #fff176; border: 1px solid #fff; border-left: 0;  box-shadow: 0 0 10px rgba(0,0,0,0.8);}
+
+}
+@media(max-width:680px){
+    #top_btn{right: 20px;}
+    #top_btn span{line-height: 34px;}
+    #top_btn span::before{width: 25px; height: 34px;}
+}
+@media(max-width:380px){
+    #top_btn{right: 15px;}
+    #top_btn span{line-height: 29px;}
+    #top_btn span::before{width: 22px; height: 29px;}
+}

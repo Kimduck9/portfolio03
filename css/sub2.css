@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+/* font */
+@font-face {
+    font-family: 'BinggraeMelona-Bold'; /* 빙그레 메로나 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* reset */
+*{margin: 0; padding: 0;}
+body{font-family: 'BinggraeMelona-Bold';}
+img{display: block; object-fit: cover;}
+a{color: #212121;}
+:root{-webkit-text-size-adjust : 100%;} /* 아이폰 가로 모드에서 글씨 확대 금지 */
+::-webkit-scrollbar{display:none;} 
+
+
+/* header */
+.header{box-sizing: border-box;}
+.header .bar{
+    width: 30px; height: 25px; cursor: pointer;
+    position: fixed; left: 3%; top: 4vh; z-index: 100;
+}
+.header .bar p{
+    width: 100%; height: 3px; background-color:rgba(0,0,0,0.9);
+    border-radius: 20px; position: absolute; left: 0px; transition: all 0.3s;
+}
+.header .bar p:nth-of-type(2){top: 9px;}
+.header .bar p:nth-of-type(3){top: 18px;}
+
+.header .bar:hover p:nth-of-type(1),
+.header .bar:focus p:nth-of-type(1){left: 20%}
+.header .bar:hover p:nth-of-type(2),
+.header .bar:focus p:nth-of-type(2){left: 40%}
+
+.header .nav{
+    width: 42%; height: 100vh; background-color: #fbe9e7;
+    position: fixed; left: -100%; top: 0vh;  z-index: 999;
+    border: 1px solid rgba(255,255,255,0.2); border-left: 0;
+    opacity: 0; transition: all 0.5s;
+}
+.header .nav.sub2{background-color: #bbdefb;}
+.header .nav.on{opacity: 1; left: 0;}
+.header .nav ul{width: 100%; height: 100%; padding-top: 20vh;}
+.header .nav ul li{margin: 0 0 12% 22%; }
+.header .nav ul li a{transition: all 0.3s; position: relative; color: black; font-size: 34px;}
+
+.header .nav ul li a::after{
+    font: var(--fa-font-solid);
+    font-size: 0.7em;
+    position: absolute; right: -38%; top: 28%;
+    opacity: 0;
+}
+.header .nav ul li:nth-of-type(1) a::after{content: "\f6f0"; right: -28%;}
+.header .nav ul li:nth-of-type(2) a::after{content: "\f4d8";}
+.header .nav ul li:nth-of-type(3) a::after{content: "\f135"; top: 30%; right: -28%;}
+.header .nav ul li:nth-of-type(4) a::after{content: "\f19d";}
+.header .nav ul li:nth-of-type(5) a::after{content: "\f4be"; right: -28%;}
+.header .nav ul li:hover a::after{opacity: 1;}
+.header .nav ul li:hover a{color: orangered;}
+
+.header .nav .x_bar{
+    width: 30px; height: 25px; cursor: pointer; 
+    position: absolute; left: 7%; top: 4vh; z-index: 100;
+    opacity: 0.8; transition: all 0.3s;
+}
+.header .nav .x_bar p{
+    width: 100%; height: 3px; background-color:rgba(0,0,0,0.9); border-radius: 20px;
+    position: absolute; left: 0px; top: 50%; transform: translateY(-50%) rotate(45deg);
+    transition: all 0.3s; 
+}
+.header .nav .x_bar p:last-child{transform: translateY(-50%) rotate(-45deg);}
+.header .nav .x_bar:hover{opacity: 1; transform: scale(1.2);}
+
+@media(max-width:1460px){
+    .header .nav ul li a{font-size: 32px;}
+}
+@media(max-width:1280px){
+    .header .nav ul li a{font-size: 30px;}
+}
+@media(max-width:1024px){
+    .header .nav ul li{margin: 0 0 14% 22%;}
+    .header .nav ul li a{font-size: 28px;}
+}
+@media(max-width:960px){
+    .header .nav ul li{margin: 0 0 20% 22%;}
+    .header .nav ul li a{font-size: 26px;}
+}
+@media(max-width:760px){
+    .header .nav ul li{margin: 8 0 20% 22%;}
+    .header .nav ul li a{font-size: 24px;}
+    .header .bar{width: 25px; height: 20px;}
+    .header .bar p:nth-of-type(2){top: 7px;}
+    .header .bar p:nth-of-type(3){top: 14px;}
+    .header .nav .x_bar{width: 25px; height: 20px; left: 7%; top: 4vh;}
+}
+@media(max-width:480px){
+    .header .nav ul li{margin: 0 0 20% 22%;}
+    .header .nav ul li a{font-size: 22px;}
+}
+@media(max-width:380px){
+    .header .nav ul li{margin: 0 0 20% 22%;}
+    .header .nav ul li a{font-size: 20px;}
+}
+
+
+/* 마우스 이모션 */
+.mouse{position: absolute;  left: 49%; transform: translateX(-50%); bottom: 10px; font-size: 16px;}
+.mouse span{position: relative; color: #333;}
+.mouse span:nth-of-type(1):before{
+    content: "";
+    position: absolute; right: -130%; top: -13px;
+    width: 45px; height: 45px; transform: rotate(-25deg);
+    background-image: url(https://github.com/Kimduck9/portfolio03-mainIMG/blob/main/click.png?raw=true); background-size: cover;
+    animation: scroll 1.8s ease-in-out infinite;
+    opacity: .9;
+}
+@keyframes scroll {
+    0%{top: -13px;}
+    50%{top: -8px;}
+    100%{top: -13px;}
+} 
+.mouse span.border::before{
+    content: "";
+    display: inline-block; transform: translateY(25%);
+    width: 18px; height: 28px; border: 1px solid #333; border-radius: 10px;
+}
+.mouse span.border::after{
+    content: "";
+    display: inline-block;
+    width: 1.5px; height: 6px; background-color: #333; border-radius: 10px;
+    position: absolute; left: 50%; transform: translateX(-50%); top: -2px;
+}
+
+
+/* 책 옆으로 설정 */
+@media(min-width:960px){
+    html, body{width: 100%; height: 100%; background-color: #e3f2fd;}
+    .wrap{width: 100%; height: 100%; overflow: hidden; -webkit-perspective: 1000; perspective: 1000;}
+    .container{width: 700%; height: 100%;}
+
+    .book{float: left; width:14.2%; height: 100%; position: relative;}
+    .book img{position: absolute; top: 3%; left: 50%; transform: translateX(-50%); width: 80%;}
+    .book.se01 img{left: 65%; width: 46%;}
+    .book.se07 img{left: 45%; width: 46%;}
+
+    /* 책 보러가기 공통 설정 */
+    .btn{position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer;}
+    .btn span{font-size: 22px; position: relative; display: block; color: #212121;}
+    .btn:hover span{animation: headShake 1.8s;}
+
+    /* 이전 책 보러가기 */
+    .se01 .btn{left: 150px;}
+    .se01 .btn span::before{
+        content: "";
+        background: url(https://github.com/Kimduck9/portfolio03-mainIMG/blob/main/som-arrowL.png?raw=true);
+        background-size: cover;
+        position: absolute; left: -35%; top: 3px;
+        width: 38px; height: 25px;
+    }
+    .se01 .btn span::after{
+        content: "\f518";
+        font: var(--fa-font-solid);
+        position: absolute; right: -22%; top: 5px;
+        color: #42a5f5;
+        font-size: 1.05em;
+    }
+
+    /* 다음 책 보러가기 */
+    .se07 .btn{right: 5%;}
+    .se07 .btn span::before{
+        content: "\f518";
+        font: var(--fa-font-solid);
+        position: absolute; left: -22%; top: 5px;
+        color: #42a5f5;
+        font-size: 1.05em;
+    }
+    .se07 .btn span::after{
+        content: "";
+        background: url(https://github.com/Kimduck9/portfolio03-mainIMG/blob/main/som-arrowR.png?raw=true);
+        background-size: cover;
+        position: absolute; right: -35%; top: 3px;
+        width: 38px; height: 25px;
+    }
+}
+/* (min-width:960px) 반응형 */
+@media(max-width:1700px){
+    .book img{top: 7%; width: 93%;}
+    .book.se01 img{left: 65%; width: 49%}
+    .book.se07 img{left: 45%; width: 49%}
+}
+@media(max-width:1460px){
+    .book img{top: 12%; width: 95%;}
+    .book.se01 img{left: 65%; width: 51%}
+    .book.se07 img{left: 45%; width: 51%}
+    .se01 .btn{left: 120px;}
+}
+@media(max-width:1024px){
+    .book img{top: 22%; width: 95%;}
+    .book.se01 img{left: 65%; width: 54%}
+    .book.se07 img{left: 40%; width: 54%}
+    .se01 .btn{left: 90px;}
+    .btn span{font-size: 20px;}
+    .se01 .btn span::before{left: -30%; top: 4px; width: 33px; height: 22px;}
+    .se07 .btn span::after{right: -30%; top: 5px; width: 33px; height: 22px;}
+}
+
+
+/* 책 아래로 설정 */
+@media(max-width:959px){
+    .container{width: 100%; background-color: #e3f2fd; box-sizing: border-box; position: relative;}
+    .book{width: 100%; height: 80vh; position:sticky; top: 0; background-color: #e3f2fd;}
+    .book.se01,
+    .book.se07{height: 100vh;}
+
+    .book img{position: absolute; top: 50%; left: 49%; transform: translate(-50%,-50%); width: 95%;}
+    .book.se01 img{width: 60%; left: 65%}
+    .book.se07 img{width: 60%; left: 38%;}
+
+    /* 책 보러가기 공통 설정 */
+    .btn{position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer;}
+    .btn span{font-size: 20px; position: relative; display: block; color: #212121;}
+    .btn:hover span{animation: headShake 1.8s;}
+
+    /* 이전 책 */
+    .se01 .btn{left: 9%;}
+    .se01 .btn span::before{
+        content: "";
+        background: url(https://github.com/Kimduck9/portfolio03-mainIMG/blob/main/som-arrowL.png?raw=true);
+        background-size: cover;
+        position: absolute; left: -28%; top: 5px;
+        width: 30px; height: 20px;
+    }
+    .se01 .btn span::after{
+        content: "\f518";
+        font: var(--fa-font-solid);
+        position: absolute; right: -22%; top: 5px;
+        color: #42a5f5;
+        font-size: 1.05em;
+    }
+
+    /* 다음 책 */
+    .se07 .btn{right: 9%;}
+    .se07 .btn span::before{
+        content: "\f518";
+        font: var(--fa-font-solid);
+        position: absolute; left: -22%; top: 5px;
+        color: #42a5f5;
+        font-size: 1.05em;
+    }
+    .se07 .btn span::after{
+        content: "";
+        background: url(https://github.com/Kimduck9/portfolio03-mainIMG/blob/main/som-arrowR.png?raw=true);
+        background-size: cover;
+        position: absolute; right: -28%; top: 5px;
+        width: 30px; height: 20px;
+    }
+}
+@media(max-width:760px){
+    .book{height: 75vh;  top: 12vh;}
+    .book.se01,
+    .book.se07{height: 100vh; top: 0;}
+    .btn{top: 10%;}
+    .btn span{font-size: 18px;}
+    .se01 .btn{left: 120px}
+    .se01 .btn span::before{left: -30%; top: 4px; width: 26px; height: 18px;}
+    .se07 .btn{right: 80px;}
+    .se07 .btn span::after{right: -28%; top: 5px; width: 26px; height: 17px;}
+}
+@media(max-width:680px){
+    .book.se07 img{top: 35%;}
+}

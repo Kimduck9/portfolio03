@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* font */
+@font-face { 
+    font-family: 'KCC-DodamdodamR'; /* 도담도담 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-DodamdodamR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KCCMurukmuruk'; /* 무럭무럭 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCMurukmuruk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BinggraeMelona-Bold'; /* 빙그레 메로나 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* reset */
+*{margin: 0; padding: 0;}
+body, html{font-family: 'KCC-DodamdodamR';}
+ul, li, ol, dl{list-style: none;}
+a{text-decoration: none; font-family: 'KCC-DodamdodamR'; color: #212121;}
+video{display: block;}
+img{display: block; object-fit: cover;}
+address, em{font-style: normal;}
+button {border: 0; outline: none;}
+
+.clearfix::before, .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+ /* 아이폰 가로 모드에서 글씨 확대 금지 */
+:root{-webkit-text-size-adjust : 100%;}
+
+::-webkit-scrollbar {display:none;} 

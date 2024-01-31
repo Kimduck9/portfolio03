@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'BinggraeMelona-Bold'; /* 빙그레 메로나 */
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BinggraeMelona-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#never{font-family: 'BinggraeMelona-Bold';}
+#never p{text-align: center; padding: 20px; font-size: 16px;}
+
+@media(max-width:1024px){
+    #never p{font-size: 14px; padding: 10px;}
+}
+
+@media(max-width:840px){
+    #never p{font-size: 12px; padding: 10px 9vw 10px 2vw;}
+}
+
+@media(max-width:440px){
+    #never p{font-size: 10px; padding: 10px 12vw 10px 2vw;}
+}

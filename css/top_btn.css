@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+#top_btn{position: fixed; right: 24px; bottom: 2%; z-index: 99999; cursor: pointer;}
+#top_btn.hi{display: none;}
+
+#top_btn span{position: relative; display: block; width: 100%; line-height: 45px; color: transparent;}
+#top_btn span::before{
+    content: "";
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/top_btn.png?raw=true) no-repeat;
+    background-size: cover;
+    width: 34px; height: 45px;
+    position: absolute; right: 0; bottom: 0;
+}
+#top_btn:hover span{animation: wobble 1s;}
+
+
+/* 반응형 */
+@media(max-width:1024px){
+    #top_btn span{line-height: 40px;}
+    #top_btn span::before{width: 29px; height: 40px;}
+}
+@media(max-width:680px){
+    #top_btn{right: 20px; bottom: 2%;}
+    #top_btn span{line-height: 34px;}
+    #top_btn span::before{width: 25px; height: 34px;}
+}
+@media(max-width:380px){
+    #top_btn{right: 15px; bottom: 1.5%;}
+    #top_btn span{line-height: 29px;}
+    #top_btn span::before{width: 22px; height: 29px;}
+}

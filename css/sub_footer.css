@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+ul, li, ol, dl{list-style: none;}
+a{text-decoration: none;}
+
+/* footer */
+.sub_footer{position: relative; font-family: 'BinggraeMelona'; cursor: default;}
+.sub_footer a{font-family: 'BinggraeMelona';}
+.sub_footer .f_list{width: 95%; margin: 80px auto 0 auto;}
+.sub_footer .f_list ul li{display: inline-block; margin: 0 1%; font-size: 14px; cursor: pointer; }
+.sub_footer .f_list ul li a{color: #777;}
+.sub_footer .f_list ul li a:hover{color: #333; font-weight: 700;}
+
+.sub_footer .sogae{width: 95%; margin: 20px auto 0 auto;}
+.sub_footer .sogae ul{border-top: 1px solid rgba(0,0,0,0.1); padding: 20px 0 30px 0;}
+.sub_footer .sogae ul li{display: inline-block; margin-right: 5%;}
+.sub_footer .sogae ul li:last-child{margin: 0;}
+.sub_footer .sogae ul li b{display: block; position: relative; font-size: 16px; margin-bottom: 2%;}
+.sub_footer .sogae ul li > span{display: block; opacity: .9; font-size: 14px; transition: all 0.3s;}
+.sub_footer .sogae ul li.gps b::before{
+    content: "";
+    width: 16px; height: 16px;
+    background: url(https://github.com/Kimduck9/portfolio03-mainIMG/blob/main/f_icon01.png?raw=true) no-repeat;
+    background-size: 100%;
+    position: absolute; left: -18px; top: 2px;
+}
+.sub_footer .sogae ul li.tel b::before{
+    content: "";
+    width: 16px; height: 16px;
+    background: url(https://github.com/Kimduck9/portfolio03-mainIMG/blob/main/f_icon02.png?raw=true) no-repeat;
+    background-size: 100%;
+    position: absolute; left: -20px; top:3px;
+}
+.sub_footer .sogae ul li.tel span:nth-of-type(2){color: transparent;}
+.sub_footer .sogae ul li:hover > span{opacity: 1; color: darkblue;}
+
+.sub_footer .f_sns{position: absolute; right:10vh; bottom: 2vh;}
+.sub_footer .f_sns ul{display: flex; align-items: center; justify-content: center;}
+.sub_footer .f_sns ul li{margin-right: 14%}
+.sub_footer .f_sns ul li img{width: 40px;}
+.sub_footer .f_sns ul li:hover img{filter: saturate(100%); animation: bounce 1s;}
+
+
+
+
+/* 반응형 */
+@media(max-width:1700px){
+    .sub_footer .f_sns{right:9vh; bottom: 2vh;}
+}
+@media(max-width:1024px){
+    .sub_footer .f_list{width: 95%; margin: 60px auto 0 auto;}
+    .sub_footer .sogae ul{padding-top: 20px;}
+    .sub_footer .sogae ul li{display: inline-block; margin-right: 3%;}
+    .sub_footer .sogae ul li b{font-size: 14px;}
+    .sub_footer .sogae ul li > span{opacity: 1; font-size: 13px;}
+    .sub_footer .sogae ul li.gps b::before{width: 15px; height: 15px; left: -16px; top: 2px;}
+    .sub_footer .sogae ul li.tel b::before{width: 15px; height: 15px; left: -17px; top:3px;}
+    .sub_footer .sogae ul li:hover > span{color: darkblue;}
+
+    .sub_footer .f_sns ul li{margin-right: 0%; margin-left: 14%;}
+    .sub_footer .f_sns ul li img{width: 33px;}
+}
+@media(max-width:860px){
+    .sub_footer .f_sns{right:4vh; bottom: 12vh;}
+    .sub_footer .f_sns ul li{margin-right: 0%; margin-left: 10%;}
+    .sub_footer .f_sns ul li img{width: 32px;}
+}
+@media(max-width:680px){
+    .sub_footer .f_list{width: 90%; margin: 30px auto 0 auto;}
+    .sub_footer .f_list ul li{font-size: 13px;}
+    .sub_footer .sogae{width: 90%; margin: 10px auto 0 auto;}
+    .sub_footer .sogae ul{padding-top: 10px;}
+    .sub_footer .sogae ul li{width: 100%; margin-bottom: 4%;}
+    .sub_footer .sogae ul li b{margin-bottom: 1%; font-size: 16px;}
+    .sub_footer .sogae ul li.gps b::before{width: 17px; height: 17px; left: 35px; top: 3px;}
+    .sub_footer .sogae ul li.tel b::before{width: 16px; height: 16px; left: 30px; top:2px; transform: rotate(-110deg);}
+    .sub_footer .f_sns{right: 4vh; bottom: 80%;}
+    .sub_footer .f_sns ul li{margin-right: 0%; margin-left: 10%;}
+    .sub_footer .f_sns ul li img{width: 30px;}
+}
+@media(max-width:380px){
+    .sub_footer .f_list ul li{font-size: 12px;}
+    .sub_footer .sogae ul li b{font-size: 14px;}
+    .sub_footer .sogae ul li.gps b::before{width: 16px; height: 16px; left: 30px; top: 1px;}
+    .sub_footer .sogae ul li.tel b::before{width: 15px; height: 15px; left: 28px; top:2px;}
+    .sub_footer .sogae ul li > span{font-size: 12px;}
+    .sub_footer .f_sns{right: 3.5vh; bottom: 80%;}
+    .sub_footer .f_sns ul li img{width: 25px;}
+}

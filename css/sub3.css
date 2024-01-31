@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+/* wrap */
+#wrap{width: 100%; background-color: rgba(251,233,231,0.7); box-sizing: border-box;}
+
+.header{background-color: #fbe9e7;}
+
+/* main */
+.main{font-family: 'BinggraeMelona-Bold'; cursor: default; padding: 5vh 0; margin-top: 10vh; box-sizing: border-box;}
+.main h2{text-align: center; text-shadow:1px 2px 2px rgba(255,87,126,0.7); font-size: 44px;}
+.main h2 b{color: #ff577e; text-shadow:1px 2px 2px rgba(0,0,0,0.7)}
+/* main : 스와이퍼 */
+.main .ababa{margin: 6vh 1vh 4vh 0;}
+.main .ababa .inner{width: 90%; height: 90%; padding: 50px 20px; margin: 16px; background-color: #fff; box-shadow: 0 5px 6px rgba(0,0,0,0.6); border-radius: 20px;}
+.main .ababa .inner > img{margin: 0 auto;}
+.main .ababa .inner .txt{margin-top: 2vh; text-align: center;}
+.main .ababa .inner .txt p{color: #212121;}
+.main .ababa .inner .txt p.in_tit{font-size: 32px}
+.main .ababa .inner .txt p.check{font-size: 28px; margin-top: 1vh;}
+.main .swiper-slide-active .inner{box-shadow: 0 5px 8px rgba(255,87,126,0.9);}
+.main .swiper-slide-active:hover .inner{box-shadow: 0 5px 8px rgba(255,87,126,0.9);}
+.main .swiper-slide-active .inner .txt p.check{color: #ff577e; margin-top: 4vh; padding-bottom: 2vh;}
+
+
+/* review */
+.review{position: relative; font-family:'BinggraeMelona'; margin-top: 10vh; box-sizing: border-box; cursor: default;}
+.re_inner{padding: 7vh 10vh 7vh 5vh;}
+.review::before{
+    content: "";
+    width: 100%; height: 100%;
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub3-cat.png?raw=true) no-repeat;
+    background-size: cover;
+    position: absolute; left: 0; top: 0;
+    opacity: 0.4;
+}
+.re_inner{position: relative; z-index: 3; display: flex; justify-content: space-between;}
+.re_inner h2{font-size: 38px; height: 38px; text-shadow:1px 2px 2px rgba(255,87,126,0.7); position: sticky; top: 120px; left: 10%;}
+.re_inner h2::before{
+    content: "";
+    width: 80px; height: 80px;
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub3-hand.png?raw=true);
+    background-size: cover;
+    position: absolute; right: -90px; top: -38px;
+}
+.re_inner h2 b{color: #ff577e; text-shadow:1px 1px 2px rgba(0,0,0,1)}
+.re_inner:hover h2{animation: pulse 1s;}
+
+.re_inner .cont{width: 50%;}
+.re_inner .cont ul{width: 47%; float: left;}
+.re_inner .cont ul.u2{margin-top: 15vh;}
+.re_inner .cont ul li{width: 60%; background-color: #f0f0f0; border-radius: 20px; margin: 0 auto 10vh; padding: 50px 38px; transition: all 0.3s; box-shadow: 0px 4px 8px rgba(0,0,0,0.5);}
+.re_inner .cont .tit p{position: relative; font-size: 20px; font-weight: bold; text-align: center; margin: 3vh 0 1vh;}
+.re_inner .cont .tit p::before{
+    content: "";
+    width: 32px; height: 32px;
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub3-face.png?raw=true);
+    background-size: cover;
+    position: absolute; left: 25%; top: -34px; transform: translateX(-50%);
+}
+.re_inner .cont .txt{text-align: justify; line-height: 1.6; font-size: 16px; transition: all 0.3s;}
+.re_inner .cont ul li:hover{background: rgba(255,255,255,0.7); box-shadow: 0 5px 5px rgba(255,87,126,0.7);}
+.re_inner .cont ul li:hover .txt{color: #000; text-shadow: 0px 0px 1px rgba(255,87,126,1);}
+
+
+/* animal */
+.animal{position: relative; margin-top: 10vh; box-sizing: border-box; cursor: default; font-family: 'BinggraeMelona';}
+.ani_inner h2{font-size: 38px; height: 38px; text-shadow:1px 2px 2px rgba(255,87,126,0.7); position: sticky; top: 120px; left: 10%; display: inline-block;}
+.ani_inner:hover h2{animation: pulse 1s;}
+.ani_inner h2::before{
+    content: "";
+    width: 100px; height: 75px;
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub3-happy.png?raw=true);
+    background-size: cover;
+    position: absolute; right: -110px; top: -20px;
+}
+.ani_inner h2 b{color: #ff577e; text-shadow:1px 1px 2px rgba(0,0,0,1)}
+
+.ani_inner .ani_cont > article{width: 100%; height: 80vh; display: flex; align-items: center; justify-content: center; flex-direction: column; position: sticky; top: 0; margin-top: 10vh;}
+.ani_inner .ani_cont > article.t1{background-color: #ffcdd2; top: 21vh;}
+.ani_inner .ani_cont > article.t2{background-color: #ffe0b2; top: 23vh;}
+.ani_inner .ani_cont > article.t3{background-color: #fcdbe6; top: 25vh;}
+.ani_inner .ani_cont > article.t4{background-color: #ffecb3; top: 27vh;}
+.ani_inner .ani_cont > article.t5{background-color: #e9bcc1; top: 29vh;}
+.ani_inner .ani_cont > article.t6{background-color: #fbe9e7; height: 100vh}
+
+.ani_inner .ani_cont > article .img_box{position: relative; overflow: hidden; margin-top: -7vh;}
+.ani_inner .ani_cont > article .img_box img{width:370px; transition: all 0.3s; cursor: pointer;}
+.ani_inner .ani_cont > article .img_box .back{
+    width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); border-radius: 40px; 
+    position: absolute; left: 0; bottom: -140%;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    transition: all 0.8s;
+}
+.ani_inner .ani_cont > article.t1 .img_box .back{width: 92%; height: 88.5%; left: 3%;}
+.ani_inner .ani_cont > article.t3 .img_box .back{height: 92%;}
+
+.ani_inner .ani_cont > article .img_box .back a{font-family:'BinggraeMelona'; padding: 10px 20px; background-color: rgba(255,255,255,0.8); border-radius: 10px; border: 2px solid rgba(255,87,126,1); color: #000; font-weight: bold; transition: all 0.3s; font-size: 16px;}
+.ani_inner .ani_cont > article .img_box .back a:nth-of-type(2){margin-top: 2%;}
+.ani_inner .ani_cont > article .img_box .back a.play{margin-top: 15%; font-size: 24px; padding: 6px 38px  12px 38px;}
+
+.ani_inner .ani_cont > article .img_box:hover .back{bottom: 0;}
+.ani_inner .ani_cont > article .img_box .back a:hover{background-color: rgba(255,255,255,0.5); text-shadow: 0px 1px rgba(255,255,255,0.6); box-shadow: 0px 2px 4px rgba(0,0,0,8);}
+
+
+.ani_inner .ani_cont > article .txt{text-align: center;}
+.ani_inner .ani_cont > article .txt strong{font-family: 'KCC-DodamdodamR'; margin-top: 6%; font-size: 60px; display: block; transition: all 0.3s;}
+.ani_inner .ani_cont > article .txt strong > span{font-size: 0.5em}
+.ani_inner .ani_cont > article .txt > p{font-weight: 700; font-size: 20px; color: #212121; position: relative; transition: all 0.3s;}
+.ani_inner .ani_cont > article .txt > p:nth-of-type(1){padding-top: 4%;}
+.ani_inner .ani_cont > article .txt > p:nth-of-type(2){display: inline-block; margin-top: 6px;}
+.ani_inner .ani_cont > article .txt > p:nth-of-type(2)::before{
+    content: "";
+    position: absolute; width: 20px; height: 15px; left: -30px; top: -10%;
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub3-que.png?raw=true) no-repeat; background-size: cover;
+    transform: rotate(180deg);
+}
+.ani_inner .ani_cont > article .txt > p:nth-of-type(2)::after{
+    content: "";
+    position: absolute; width: 20px; height: 15px; right: -30px; top: 8%;
+    background: url(https://github.com/Kimduck9/portfolio03-subIMG/blob/main/sub3-que.png?raw=true) no-repeat; background-size: cover;
+}
+.ani_inner .ani_cont > article .txt:hover strong{text-shadow: 0px 1px 2px rgba(0,0,0,0.6)}
+.ani_inner .ani_cont > article .txt:hover p{text-shadow: 0px 2px 2px rgba(255,87,126,0.7)}
+
+
+
+
+
+/* 반응형 */
+@media(max-width:1460px){
+    .main h2{font-size: 40px;}
+    .main .ababa{margin: 6vh 1vh 4vh 0;}
+    .main .ababa .inner img{width: 160px;}
+    .main .ababa .inner .txt p.in_tit{font-size: 30px}
+    .main .ababa .inner .txt p.check{font-size: 28px; margin-top: 1vh;}
+
+    .re_inner{padding: 7vh 0vh 5vh 2vh;}
+    .re_inner h2,
+    .ani_inner h2{font-size: 36px; height: 36px; left: 5%}
+    .re_inner h2::before{width: 75px; height: 75px; right: -85px; top: -34px;}
+    .re_inner .cont{width: 55%;}
+    .re_inner .cont ul{width: 50%;}
+
+    .ani_inner .ani_cont > article .img_box img{width:360px;}
+    .ani_inner .ani_cont > article .txt strong{font-size: 58px;}
+}
+
+@media(max-width:1280px){
+    .main h2{font-size: 39px;}
+    .main .ababa .inner img{width: 150px;}
+    .main .ababa .inner .txt p.in_tit{font-size: 29px}
+    .main .ababa .inner .txt p.check{font-size: 27px; margin-top: 1vh;}
+
+    .re_inner{padding: 10vh 0vh 5vh 3vh;}
+    .re_inner h2,
+    .ani_inner h2{font-size: 35px; height: 35px; left: 2%}
+    .re_inner h2::before{width: 75px; height: 75px; right: -85px; top: -30px;}
+    .re_inner .cont{width: 60%;}
+    .re_inner .cont ul li{width: 62%; margin: 0 auto 7vh; padding: 45px 30px;}
+    .re_inner .cont .tit p::before{width: 30px; height: 30px; left: 24%; top: -30px;}
+    .re_inner .cont .txt{line-height: 1.5; font-size: 15px;}
+
+    .ani_inner h2::before{width: 90px; height: 65px; right: -100px; top: -18px;}
+    .ani_inner .ani_cont > article .img_box img{width:350px;}
+    .ani_inner .ani_cont > article .img_box .back a{font-size: 15px; padding: 10px 20px;}
+    .ani_inner .ani_cont > article .img_box .back a.play{font-size: 23px; padding: 6px 38px  12px 38px;}
+
+    .ani_inner .ani_cont > article .txt strong{font-size: 56px;}
+    .ani_inner .ani_cont > article .txt > p{font-size: 19px;}
+}
+
+@media(max-width:1024px){
+    .main h2{font-size: 36px;}
+    .main .ababa .inner{padding: 70px 20px 50px;}
+    .main .ababa .inner img{width: 140px;}
+    .main .ababa .inner .txt p.in_tit{font-size: 26px}
+    .main .ababa .inner .txt p.check{font-size: 26px; margin-top: 1vh;}
+    .main .swiper-slide-active{margin-left: 2%;}
+    .main .swiper-slide-active .inner .txt p.check{margin-top: 2vh; padding-bottom: 0vh;}
+
+    .re_inner{padding: 10vh 0vh 10vh 3vh;}
+    .re_inner h2,
+    .ani_inner h2{font-size: 32px; height: 35px; left:9%}
+    .re_inner h2 em{display: block; padding-left: 4px;  white-space: nowrap;}
+    .re_inner h2::before{width: 65px; height: 65px; right: -70px; top: 18px;}
+    .ani_inner .ani_cont > article.t1{top: 20vh;}
+    .ani_inner .ani_cont > article.t2{top: 21vh;}
+    .ani_inner .ani_cont > article.t3{top: 22vh;}
+    .ani_inner .ani_cont > article.t4{top: 23vh;}
+    .ani_inner .ani_cont > article.t5{top: 24vh;}
+    .ani_inner .ani_cont > article.t6{height: 80vh;}
+    .re_inner .cont{width: 63%;}
+    .re_inner .cont ul{width: 50%;}
+    .re_inner .cont ul li{width: 70%; margin: 0 0 7vh 0; padding: 24px 32px;}
+    .re_inner .cont .tit p{font-size: 18px; margin: 3vh 0 1.5vh;}
+    .re_inner .cont .tit p::before{width: 26px; height: 26px; left: 22%; top: -26px;}
+    .re_inner .cont .txt{line-height: 1.4; font-size: 14px;}
+
+    .ani_inner .ani_cont > article .img_box{margin-top: -10vh;}
+    .ani_inner .ani_cont > article .img_box img{width:340px;}
+    .ani_inner .ani_cont > article .img_box .back a{font-size: 14px; padding: 10px 20px;}
+    .ani_inner .ani_cont > article .img_box .back a.play{font-size: 21px; padding: 6px 40px 12px 40px;}
+    .ani_inner .ani_cont > article .txt strong{font-size: 50px;}
+    .ani_inner .ani_cont > article .txt > p{font-size: 16px;}
+    .ani_inner .ani_cont > article .txt > p:nth-of-type(2){margin-top: 5px;}
+    .ani_inner .ani_cont > article .txt > p:nth-of-type(2)::before{width: 20px; height: 15px; left: -30px; top: -0%;}
+    .ani_inner .ani_cont > article .txt > p:nth-of-type(2)::after{width: 20px; height: 15px; right: -30px; top: 8%;}
+}
+
+@media(max-width:860px){
+    .main .ababa{margin: 2vh 1vh 3vh 0;}
+    .main h2{font-size: 32px;}
+    .main .ababa .inner{padding: 50px 10px}
+    .main .ababa .inner img{width: 140px;}
+    .main .ababa .inner .txt p.in_tit,
+    .main .ababa .inner .txt p.check{font-size: 24px;}
+    .main .swiper-slide-active{margin-left: 2.5%;}
+    .main .swiper-slide-active .inner .txt p.check{margin-top: 1vh;;}
+
+    .re_inner{padding: 10vh 0vh 12vh 3vh;}
+    .re_inner h2,
+    .ani_inner h2{font-size: 28px; left:10%}
+    .re_inner h2 em{padding-left: 6px;}
+    .re_inner h2::before{width: 55px; height: 55px; right: -60px; top: 15px;}
+    .re_inner .cont{width: 55%;}
+    .re_inner .cont ul{width: 100%;}
+    .re_inner .cont ul.u2{margin-top: 0vh;}
+    .re_inner .cont ul li{width: 75%; margin: 0 0 4vh 0; padding: 24px 36px;}
+    .re_inner .cont ul.u2 li:last-child{margin-bottom: 0;}
+    .re_inner .cont .tit p::before{width: 25px; height: 25px; left: 29%; top: -26px;}
+    .re_inner .cont .txt{line-height: 1.4; font-size: 14px;}
+
+    .ani_inner h2::before{width: 80px; height: 55px; right: -85px; top: -18px;}
+    .ani_inner .ani_cont > article .img_box{margin-top: -5vh;}
+    .ani_inner .ani_cont > article .img_box img{width:320px;}
+    .ani_inner .ani_cont > article .img_box .back a.play{font-size: 20px; padding: 6px 40px 12px 40px;}
+    .ani_inner .ani_cont > article .txt strong{font-size: 48px;}
+}
+
+@media(max-width:680px){
+    .main .swiper-slide-active{margin-left: 0.4%;}
+}
+
+@media(max-width:620px){
+    .main h2{font-size: 30px;}
+    .main .ababa{margin: 1vh 1vh 0vh 0;}
+    .main .ababa .inner{padding: 40px 0px}
+    .main .ababa .inner img{width: 120px;}
+    .main .ababa .inner .txt p.in_tit,
+    .main .ababa .inner .txt p.check{font-size: 22px;}
+    .main .swiper-slide-active{padding-left: 2%}
+
+    .re_inner{padding: 8vh 1vh 12vh 3vh;}
+    .re_inner h2,
+    .ani_inner h2{font-size: 26px; left:10%}
+    .re_inner h2 em{padding-left: 0px;}
+    .re_inner h2::before{width: 48px; height: 48px; right: -50px; top: 18px;}
+    .re_inner .cont{width:50%;}
+    .re_inner .cont ul li{width:72%; margin: 0 0 3vh 0; padding: 24px 28px;}
+    .re_inner .cont .tit p{font-size: 17px; margin: 3vh 0 1.5vh;}
+    .re_inner .cont .tit p::before{width: 24px; height: 24px; left: 20%; top: -24px;}
+    .re_inner .cont .txt{line-height: 1.4; font-size: 14px;}
+
+    .ani_inner h2::before{width: 70px; height: 50px; right: -75px; top: -14px;}
+    .ani_inner .ani_cont > article .img_box{margin-top: 0vh;}
+    .ani_inner .ani_cont > article .img_box img{width:300px;}
+    .ani_inner .ani_cont > article .img_box .back a{font-size: 13px; padding: 10px 20px;}
+    .ani_inner .ani_cont > article .img_box .back a.play{font-size: 18px; padding: 6px 44px 12px 44px;}
+    .ani_inner .ani_cont > article .txt strong{font-size: 42px;}
+    .ani_inner .ani_cont > article .txt > p{font-size: 15px;}
+    .ani_inner .ani_cont > article .txt > p:nth-of-type(2)::before{width: 18px; height: 13px; left: -26px; top: -8%;}
+    .ani_inner .ani_cont > article .txt > p:nth-of-type(2)::after{width: 18px; height: 13px; right: -28px; top: 8%;}
+}
+
+@media(max-width:480px){
+    .main h2{font-size: 28px;}
+    .main .ababa .inner img{width: 100px;}
+    .main .ababa .inner .txt p.in_tit,
+    .main .ababa .inner .txt p.check{font-size: 20px;}
+
+    .re_inner{padding: 8vh 1vh 12vh 3vh;}
+    .re_inner h2,
+    .ani_inner h2{font-size: 24px; left:10%}
+    .re_inner h2::before{width: 50px; height: 50px; right: 0px; left: 10px; top: -50px; }
+    .re_inner .cont{width:55%;}
+    .re_inner .cont ul li{width: 80%; padding: 24px 18px;}
+
+    .ani_inner h2::before{width: 70px; height: 50px; right: -75px; top: -16px;}
+    .ani_inner .ani_cont > article .img_box img{width:270px;}
+    .ani_inner .ani_cont > article .img_box .back a{font-size: 12px; padding: 11px 15px;}
+    .ani_inner .ani_cont > article .img_box .back a.play{font-size: 17px; padding: 6px 40px 10px 40px;}
+    .ani_inner .ani_cont > article .txt strong{font-size: 38px;}
+    .ani_inner .ani_cont > article .txt > p{font-size: 15px;}
+    .ani_inner .ani_cont > article .txt > p:nth-of-type(2){margin-top: 8px; font-size: 14px;}
+    .ani_inner .ani_cont > article .txt > p.emm span{display: block;}
+    .ani_inner .ani_cont > article .txt > p:nth-of-type(2)::before{width: 18px; height: 13px; left: -26px; top: -4px}
+    .ani_inner .ani_cont > article .txt > p:nth-of-type(2)::after{width: 18px; height: 13px; right: -28px; top: 4px}
+
+    .ani_inner .ani_cont > article.t2 .txt > p:nth-of-type(2)::before{width: 18px; height: 13px; left: -24px; top: -4px}
+    .ani_inner .ani_cont > article.t2 .txt > p:nth-of-type(2)::after{width: 18px; height: 13px; right: 40px; top: 22px}
+    .ani_inner .ani_cont > article.t3 .txt > p:nth-of-type(2)::before{width: 18px; height: 13px; left: -4px; top: -4px}
+    .ani_inner .ani_cont > article.t3 .txt > p:nth-of-type(2)::after{width: 18px; height: 13px; right: -24px; top: 22px}
+}
